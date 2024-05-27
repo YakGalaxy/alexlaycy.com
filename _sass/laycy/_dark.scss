@@ -145,7 +145,7 @@ a:not(.internal-link):not(.plain):not(#site-title)::after {
     color: $dark-white;
   }
 
-  // Navbar
+ // Navbar
   .navbar {
     border-color: $dark-light;
     .menu {
@@ -158,10 +158,12 @@ a:not(.internal-link):not(.plain):not(#site-title)::after {
         }
       }
 
-      .menu-link {
-        color: #eaeaea;
-      &:hover {
+      .menu-link:hover {
         color:$dark-text-link-blue;
+      }
+
+      .menu-link {
+        color: $dark-white;
       }
       @include media-query($on-mobile) {
         background-color: $dark-black;
@@ -179,7 +181,6 @@ a:not(.internal-link):not(.plain):not(#site-title)::after {
       }
     }
   }
-}
 
   // Post Item
   .post-item {
