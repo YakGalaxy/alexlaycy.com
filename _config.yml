@@ -1,0 +1,114 @@
+# Site settings
+title: alexlaycy.com # site title
+description: >- # site description
+  Thoughts, tools and resources to help you delve into the complexities of building effective, sustainable technology solutions.
+lang: en-GB # default lang
+timezone: Europe/London # set your timezone
+image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
+repo: https://github.com/YakGalaxy/alexlaycy.com # site repo [optional]
+mode: dark # default theme "dark" | "light"
+
+# Profile settings
+author:
+  name: Alex Laycy # author name
+  bio: >- # tell to the world
+    
+  username: username # general username
+  github: YakGalaxy # github username
+  twitter: twitter_username # twitter username
+  facebook: facebook_username # facebook username
+  email: alex@alexlaycy.com # email adress
+  avatar: /assets/img/avatar.png # change with your own avatar
+
+# URL settings
+url: "https://www.alexlaycy.com" #
+baseurl:
+permalink: /:title/
+google_analytics: # leave it blank if not wish
+fb_appid:
+
+# Collection setting
+collections:
+  posts:
+    output: true
+    permalink: /posts/:year/:month/:day/:title/
+    sort_by: date
+  guides:
+    output: true
+    permalink: /:title/
+    sort_by: title
+  projects:
+    output: true
+    permalink: /projects/:title/
+    sort_by: title
+  resources:
+    output: true
+    permalink: /resources/:title/
+    sort_by: title
+  reviews:
+    output: true
+    permalink: /reviews/:title/
+    sort_by: title
+  faqs:
+    output: true
+    permalink: /faqs/:title/
+    sort_by: title
+
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  syntax_highlighter: rouge
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: post
+      comments: false
+
+# Jekyll Compose default front matter
+jekyll_compose:
+  post_default_front_matter:
+    modified:
+    tags: []
+    description:
+  draft_default_front_matter:
+    modified:
+    tags: []
+    description:
+
+# Homepage limit posts
+number_of_posts: 6
+
+# Build settings
+# theme: 
+sass:
+  style: compressed
+
+include:
+  - _redirects
+  - .htaccess
+
+exclude:
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - CHANGELOG.md
+  - README.md
+  - node_modules
+  - klise-*.gem
+  - klise.gemspec
+  - _staging
+  - .obsidian
+  - _posts/.obsidian
+  - .ruby-version
+  - _excludes
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-postfiles
