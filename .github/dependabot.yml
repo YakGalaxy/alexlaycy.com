@@ -1,0 +1,29 @@
+# Configuration for Dependabot
+version: 2
+updates:
+  # Enable version updates for Bundler
+  - package-ecosystem: "bundler"
+    # Directory where the Gemfile and Gemfile.lock are located
+    directory: "/"
+    # Check for updates daily
+    schedule:
+      interval: "daily"
+    # Limit the number of open pull requests to manage review workload
+    open-pull-requests-limit: 5
+    # Limit update scope to security updates only
+    allow:
+      - dependency-type: "direct"
+      - dependency-type: "indirect"
+    # Choose a versioning strategy
+    versioning-strategy: "increase-if-necessary"
+    # Automatically assign reviewers for pull requests
+    reviewers:
+      - "YakGalaxy"
+    # Add labels to pull requests for easy identification
+    labels:
+      - "dependency-update"
+      - "bundler"
+    # Configure commit messages
+    commit-message:
+      prefix: "chore"
+      include: "scope"
